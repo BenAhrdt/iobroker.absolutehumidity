@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.5 (2026-07-05)
 * (BenAhrdt) Id will change in case of renameing device
 * (BenAhrdt) Add second manual calculation for compare
 

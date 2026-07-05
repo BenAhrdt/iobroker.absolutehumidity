@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "news": {
+      "0.0.5": {
+        "en": "Id will change in case of renameing device\nAdd second manual calculation for compare",
+        "de": "Die ID ändert sich, wenn das Gerät umbenannt wird.\nFüge eine zweite manuelle Berechnung zum Vergleich hinzu.",
+        "ru": "Идентификатор изменится в случае переименования устройства.\nДобавьте второй ручной расчет для сравнения.",
+        "pt": "O ID será alterado caso o dispositivo seja renomeado.\nAdicionar um segundo cálculo manual para comparação.",
+        "nl": "De ID verandert als het apparaat een andere naam krijgt.\nVoeg een tweede handmatige berekening toe ter vergelijking.",
+        "fr": "L'identifiant changera en cas de changement de nom de l'appareil.\nAjouter un deuxième calcul manuel pour la comparaison",
+        "it": "L'ID cambierà in caso di ridenominazione del dispositivo.\nAggiungi un secondo calcolo manuale per il confronto",
+        "es": "El ID cambiará en caso de que se cambie el nombre del dispositivo.\nAgregar un segundo cálculo manual para comparar",
+        "pl": "Identyfikator ulegnie zmianie w przypadku zmiany nazwy urządzenia\nDodaj drugie obliczenie ręczne w celu porównania",
+        "uk": "Ідентифікатор зміниться у разі перейменування пристрою\nДодати другий ручний розрахунок для порівняння",
+        "zh-cn": "设备重命名时，ID 将会更改。\n添加第二个手动计算以进行比较。"
+      },
       "0.0.4": {
         "en": "Build Config in adapter own device object",
         "de": "Konfiguration im eigenen Geräteobjekt des Adapters erstellen",
