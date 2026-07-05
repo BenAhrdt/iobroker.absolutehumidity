@@ -14,6 +14,20 @@
 
 build absolute humidity from actual temperature and relative humidity
 
+## Calculation method
+
+The adapter uses empirical Magnus approximation formulas to calculate the
+saturation vapor pressure from temperature and relative humidity.
+
+* Absolute humidity is calculated from the saturation vapor pressure using the
+  Magnus/Bolton approximation and the ideal gas law. The result is returned in
+  g/m³.
+* Dew point temperature is calculated using the Magnus formula with Sonntag
+  coefficients. The result is returned in °C.
+
+Small deviations from online tables are expected because different tables often
+use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
+
 ![Kachel](image.png)
 
 ## Changelog
