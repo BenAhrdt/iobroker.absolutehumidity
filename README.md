@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.0.4 (2026-07-05)
 * (BenAhrdt) Build Config in adapter own device object
 
 ### 0.0.3 (2026-07-05)

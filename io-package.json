@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "news": {
+      "0.0.4": {
+        "en": "Build Config in adapter own device object",
+        "de": "Konfiguration im eigenen Geräteobjekt des Adapters erstellen",
+        "ru": "Создайте конфигурацию в собственном объекте устройства адаптера.",
+        "pt": "Configuração de construção no objeto de dispositivo próprio do adaptador",
+        "nl": "Bouw de configuratie in het eigen apparaatobject van de adapter.",
+        "fr": "Configurer l'objet périphérique propre à l'adaptateur",
+        "it": "Costruisci la configurazione nell'oggetto dispositivo dell'adattatore",
+        "es": "Construir la configuración en el objeto de dispositivo propio del adaptador",
+        "pl": "Konfiguracja kompilacji w obiekcie własnego urządzenia adaptera",
+        "uk": "Збірка конфігурації у власному об'єкті пристрою адаптера",
+        "zh-cn": "适配器自身设备对象中的构建配置"
+      },
       "0.0.3": {
         "en": "Add new features and icons to deviceManager",
         "de": "Füge dem Gerätemanager neue Funktionen und Symbole hinzu.",
