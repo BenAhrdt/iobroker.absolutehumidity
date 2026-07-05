@@ -1,4 +1,4 @@
-![Logo](admin/absolutehumidity.png)
+![Logo](admin/absolutehumidity.svg)
 # ioBroker.absolutehumidity
 
 [![NPM version](https://img.shields.io/npm/v/iobroker.absolutehumidity.svg)](https://www.npmjs.com/package/iobroker.absolutehumidity)
