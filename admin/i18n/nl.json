@@ -1,0 +1,23 @@
+{
+	"absolutehumidity adapter settings": "Adapterinstellingen voor absolutehumidity",
+	"Configuration is done via the Device Manager tab on the left side.": "De configuratie gebeurt via het Device Manager-tabblad aan de linkerkant.",
+	"Manage devices in the Device Manager tab.": "Apparaten worden beheerd op het Device Manager-tabblad.",
+	"Open Device Manager": "Device Manager openen",
+	"Open adapter tab": "Adaptertabblad openen",
+	"Manual calculation": "Handmatige berekening",
+	"Add device": "Apparaat toevoegen",
+	"Add a temperature and humidity device": "Temperatuur- en vochtigheidsapparaat toevoegen",
+	"Edit device": "Apparaat bewerken",
+	"Delete device": "Apparaat verwijderen",
+	"Delete this device?": "Dit apparaat verwijderen?",
+	"Device not found": "Apparaat niet gevonden",
+	"Name": "Naam",
+	"Temperature": "Temperatuur",
+	"Temperature state": "Temperatuurstate",
+	"Create temperature state in adapter": "Temperatuurstate in adapter aanmaken",
+	"Relative humidity": "Relatieve luchtvochtigheid",
+	"Relative humidity state": "Relatieve-luchtvochtigheidstate",
+	"Create relative humidity state in adapter": "Relatieve-luchtvochtigheidstate in adapter aanmaken",
+	"Absolute humidity": "Absolute luchtvochtigheid",
+	"Dew point temperature": "Dauwpunttemperatuur"
+}

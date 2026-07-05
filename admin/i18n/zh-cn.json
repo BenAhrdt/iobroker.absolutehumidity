@@ -1,0 +1,23 @@
+{
+	"absolutehumidity adapter settings": "absolutehumidity的适配器设置",
+	"Configuration is done via the Device Manager tab on the left side.": "配置通过左侧的 Device Manager 标签页完成。",
+	"Manage devices in the Device Manager tab.": "设备在 Device Manager 标签页中管理。",
+	"Open Device Manager": "打开 Device Manager",
+	"Open adapter tab": "打开适配器标签页",
+	"Manual calculation": "手动计算",
+	"Add device": "添加设备",
+	"Add a temperature and humidity device": "添加温湿度设备",
+	"Edit device": "编辑设备",
+	"Delete device": "删除设备",
+	"Delete this device?": "删除此设备？",
+	"Device not found": "未找到设备",
+	"Name": "名称",
+	"Temperature": "温度",
+	"Temperature state": "温度状态",
+	"Create temperature state in adapter": "在适配器中创建温度状态",
+	"Relative humidity": "相对湿度",
+	"Relative humidity state": "相对湿度状态",
+	"Create relative humidity state in adapter": "在适配器中创建相对湿度状态",
+	"Absolute humidity": "绝对湿度",
+	"Dew point temperature": "露点温度"
+}

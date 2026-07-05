@@ -1,0 +1,109 @@
+{
+	"common": {
+		"name": "absolutehumidity",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"uk": "Початкова версія",
+				"zh-cn": "首次出版"
+			}
+		},
+		"titleLang": {
+			"en": "Absolute Humidity",
+			"de": "Absolute Luftfeuchtigkeit",
+			"ru": "Абсолютная влажность",
+			"pt": "Umidade Absoluta",
+			"nl": "Absolute vochtigheid",
+			"fr": "Humidité absolue",
+			"it": "Umidità assoluta",
+			"es": "Humedad absoluta",
+			"pl": "Wilgotność bezwzględna",
+			"uk": "Абсолютна вологість",
+			"zh-cn": "绝对湿度"
+		},
+		"desc": {
+			"en": "build absolute humidity from actual temperature and relative humidity",
+			"de": "Ermitteln Sie die absolute Luftfeuchtigkeit aus der tatsächlichen Temperatur und der relativen Luftfeuchtigkeit",
+			"ru": "построить абсолютную влажность на основе фактической температуры и относительной влажности",
+			"pt": "construir umidade absoluta a partir da temperatura real e umidade relativa",
+			"nl": "bouw de absolute vochtigheid op uit de werkelijke temperatuur en de relatieve vochtigheid",
+			"fr": "construire l'humidité absolue à partir de la température réelle et de l'humidité relative",
+			"it": "costruire l'umidità assoluta dalla temperatura effettiva e dall'umidità relativa",
+			"es": "construir humedad absoluta a partir de la temperatura real y la humedad relativa",
+			"pl": "zbuduj wilgotność bezwzględną na podstawie rzeczywistej temperatury i wilgotności względnej",
+			"uk": "побудувати абсолютну вологість з фактичної температури та відносної вологості",
+			"zh-cn": "根据实际温度和相对湿度建立绝对湿度"
+		},
+		"authors": [
+			"BenAhrdt <github@ben-schmidt.net>"
+		],
+		"keywords": [
+			"absolute Humidity",
+			"dewpoint temperature"
+		],
+		"licenseInformation": {
+			"type": "free",
+			"license": "MIT"
+		},
+		"platform": "Javascript/Node.js",
+		"icon": "absolutehumidity.svg",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/BenAhrdt/ioBroker.absolutehumidity/main/admin/absolutehumidity.svg",
+		"readme": "https://github.com/BenAhrdt/ioBroker.absolutehumidity/blob/main/README.md",
+		"loglevel": "info",
+		"tier": 3,
+		"mode": "daemon",
+		"type": "weather",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "push",
+		"supportedMessages": {
+			"deviceManager": true
+		},
+		"adminUI": {
+			"config": "json",
+			"tab": "json"
+		},
+		"adminTab": {
+			"singleton": true,
+			"name": {
+				"en": "Absolute Humidity",
+				"de": "Absolute Luftfeuchtigkeit",
+				"ru": "Абсолютная влажность",
+				"pt": "Umidade Absoluta",
+				"nl": "Absolute vochtigheid",
+				"fr": "Humidité absolue",
+				"it": "Umidità assoluta",
+				"es": "Humedad absoluta",
+				"pl": "Wilgotność bezwzględna",
+				"uk": "Абсолютна вологість",
+				"zh-cn": "绝对湿度"
+			},
+			"link": "TabConfig.json"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=6.0.11"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=7.0.23"
+			}
+		]
+	},
+	"native": {
+		"devices": []
+	},
+	"objects": [],
+	"instanceObjects": []
+}

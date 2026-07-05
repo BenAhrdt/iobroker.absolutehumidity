@@ -1,0 +1,50 @@
+{
+	"i18n": true,
+	"type": "panel",
+	"items": {
+		"_configurationInfo": {
+			"type": "staticText",
+			"text": "Configuration is done via the Device Manager tab on the left side.",
+			"newLine": true,
+			"xs": 12,
+			"sm": 12,
+			"md": 12,
+			"lg": 12,
+			"xl": 12,
+			"style": {
+				"fontSize": 16,
+				"lineHeight": 1.5
+			}
+		},
+		"_configurationLink": {
+			"type": "staticLink",
+			"label": "Open adapter tab",
+			"href": "#tab-absolutehumidity",
+			"target": "_self",
+			"button": true,
+			"variant": "contained",
+			"color": "primary",
+			"newLine": true,
+			"xs": 12,
+			"sm": 12,
+			"md": 8,
+			"lg": 6,
+			"xl": 6,
+			"controlStyle": {
+				"backgroundColor": "#0f4c81",
+				"color": "#ffffff"
+			}
+		},
+		"_previewCard": {
+			"type": "staticText",
+			"format": "html",
+			"text": "<div class='ah-preview-card' style='width:300px;background:#d3d3d3;border-radius:4px;overflow:hidden;box-shadow:0 2px 4px rgba(0,0,0,.25);margin-top:24px;color:#000;font-family:Roboto,Arial,sans-serif;'><div style='height:60px;background:#0f4c81;color:#fff;display:flex;align-items:center;padding:0 18px;gap:18px;font-weight:700;'><img src='adapter/absolutehumidity/absolutehumidity.svg' alt='' style='width:34px;height:34px;object-fit:contain;'><span>TestGeraet</span></div><div style='padding:18px 16px 20px;'><div style='color:#00a51a;font-size:20px;margin-bottom:18px;'>↔</div><div style='display:grid;grid-template-columns:1fr auto;gap:14px 16px;align-items:center;'><label for='ah-preview-temp'>Temperatur:</label><span><input id='ah-preview-temp' data-ah-temp type='number' value='21' step='0.1' style='width:72px;background:#fff;border:1px solid #ccc;border-radius:3px;padding:4px 6px;text-align:right;color:#000;' onchange='event.stopPropagation();event.stopImmediatePropagation();' oninput='event.stopPropagation();event.stopImmediatePropagation();const r=this.closest(\".ah-preview-card\"),t=Number(r.querySelector(\"[data-ah-temp]\").value),h=Number(r.querySelector(\"[data-ah-rh]\").value),abs=r.querySelector(\"[data-ah-abs]\"),dew=r.querySelector(\"[data-ah-dew]\");if(Number.isFinite(t)&&Number.isFinite(h)&&h>=0&&h<=100){const es=6.112*Math.exp((17.67*t)/(t+243.5)),e=h/100*es;abs.textContent=(Math.round(((216.7*e)/(273.15+t))*100)/100).toFixed(2);}else abs.textContent=\"\";if(Number.isFinite(t)&&Number.isFinite(h)&&h>0&&h<=100){const a=Math.log(h/100)+(17.62*t)/(243.12+t);dew.textContent=(Math.round(((243.12*a)/(17.62-a))*100)/100).toFixed(2);}else dew.textContent=\"\";'> <span style='color:#555;font-size:12px;'>°C</span></span><label for='ah-preview-rh'>Relative Luftfeuchte:</label><span><input id='ah-preview-rh' data-ah-rh type='number' value='50' min='0' max='100' step='1' style='width:72px;background:#fff;border:1px solid #ccc;border-radius:3px;padding:4px 6px;text-align:right;color:#000;' onchange='event.stopPropagation();event.stopImmediatePropagation();' oninput='event.stopPropagation();event.stopImmediatePropagation();const r=this.closest(\".ah-preview-card\"),t=Number(r.querySelector(\"[data-ah-temp]\").value),h=Number(r.querySelector(\"[data-ah-rh]\").value),abs=r.querySelector(\"[data-ah-abs]\"),dew=r.querySelector(\"[data-ah-dew]\");if(Number.isFinite(t)&&Number.isFinite(h)&&h>=0&&h<=100){const es=6.112*Math.exp((17.67*t)/(t+243.5)),e=h/100*es;abs.textContent=(Math.round(((216.7*e)/(273.15+t))*100)/100).toFixed(2);}else abs.textContent=\"\";if(Number.isFinite(t)&&Number.isFinite(h)&&h>0&&h<=100){const a=Math.log(h/100)+(17.62*t)/(243.12+t);dew.textContent=(Math.round(((243.12*a)/(17.62-a))*100)/100).toFixed(2);}else dew.textContent=\"\";'> <span style='color:#555;font-size:12px;'>%</span></span><span>Absolute Luftfeuchte:</span><span style='text-align:right;'><span data-ah-abs>9.16</span> <span style='color:#555;font-size:12px;'>g/m³</span></span><span>Taupunkttemperatur:</span><span style='text-align:right;'><span data-ah-dew>10.18</span> <span style='color:#555;font-size:12px;'>°C</span></span></div><div style='height:34px;'></div></div></div>",
+			"newLine": true,
+			"xs": 12,
+			"sm": 12,
+			"md": 8,
+			"lg": 6,
+			"xl": 6
+		}
+	}
+}

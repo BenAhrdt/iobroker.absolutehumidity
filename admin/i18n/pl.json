@@ -1,0 +1,23 @@
+{
+	"absolutehumidity adapter settings": "Ustawienia adaptera dla absolutehumidity",
+	"Configuration is done via the Device Manager tab on the left side.": "Konfiguracja odbywa się za pomocą karty Device Manager po lewej stronie.",
+	"Manage devices in the Device Manager tab.": "Urządzenia są zarządzane na karcie Device Manager.",
+	"Open Device Manager": "Otwórz Device Manager",
+	"Open adapter tab": "Otwórz kartę adaptera",
+	"Manual calculation": "Obliczenie ręczne",
+	"Add device": "Dodaj urządzenie",
+	"Add a temperature and humidity device": "Dodaj urządzenie temperatury i wilgotności",
+	"Edit device": "Edytuj urządzenie",
+	"Delete device": "Usuń urządzenie",
+	"Delete this device?": "Usunąć to urządzenie?",
+	"Device not found": "Nie znaleziono urządzenia",
+	"Name": "Nazwa",
+	"Temperature": "Temperatura",
+	"Temperature state": "Stan temperatury",
+	"Create temperature state in adapter": "Utwórz stan temperatury w adapterze",
+	"Relative humidity": "Wilgotność względna",
+	"Relative humidity state": "Stan wilgotności względnej",
+	"Create relative humidity state in adapter": "Utwórz stan wilgotności względnej w adapterze",
+	"Absolute humidity": "Wilgotność bezwzględna",
+	"Dew point temperature": "Temperatura punktu rosy"
+}

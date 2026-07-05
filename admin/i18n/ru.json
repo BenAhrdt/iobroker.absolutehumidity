@@ -1,0 +1,23 @@
+{
+	"absolutehumidity adapter settings": "Настройки адаптера для absolutehumidity",
+	"Configuration is done via the Device Manager tab on the left side.": "Настройка выполняется через вкладку Device Manager слева.",
+	"Manage devices in the Device Manager tab.": "Устройства управляются на вкладке Device Manager.",
+	"Open Device Manager": "Открыть Device Manager",
+	"Open adapter tab": "Открыть вкладку адаптера",
+	"Manual calculation": "Ручной расчет",
+	"Add device": "Добавить устройство",
+	"Add a temperature and humidity device": "Добавить устройство температуры и влажности",
+	"Edit device": "Редактировать устройство",
+	"Delete device": "Удалить устройство",
+	"Delete this device?": "Удалить это устройство?",
+	"Device not found": "Устройство не найдено",
+	"Name": "Имя",
+	"Temperature": "Температура",
+	"Temperature state": "Состояние температуры",
+	"Create temperature state in adapter": "Создать состояние температуры в адаптере",
+	"Relative humidity": "Относительная влажность",
+	"Relative humidity state": "Состояние относительной влажности",
+	"Create relative humidity state in adapter": "Создать состояние относительной влажности в адаптере",
+	"Absolute humidity": "Абсолютная влажность",
+	"Dew point temperature": "Температура точки росы"
+}
