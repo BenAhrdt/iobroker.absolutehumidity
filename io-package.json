@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "news": {
+      "0.0.3": {
+        "en": "Add new features and icons to deviceManager",
+        "de": "Füge dem Gerätemanager neue Funktionen und Symbole hinzu.",
+        "ru": "Добавьте новые функции и значки в deviceManager.",
+        "pt": "Adicionar novos recursos e ícones ao gerenciador de dispositivos",
+        "nl": "Voeg nieuwe functies en pictogrammen toe aan DeviceManager.",
+        "fr": "Ajouter de nouvelles fonctionnalités et icônes à deviceManager",
+        "it": "Aggiungi nuove funzionalità e icone a DeviceManager",
+        "es": "Agregar nuevas funciones e íconos al Administrador de dispositivos",
+        "pl": "Dodaj nowe funkcje i ikony do DeviceManager",
+        "uk": "Додавання нових функцій та піктограм до DeviceManager",
+        "zh-cn": "向设备管理器添加新功能和图标"
+      },
       "0.0.2": {
         "en": "initial release",
         "de": "Erstveröffentlichung",
