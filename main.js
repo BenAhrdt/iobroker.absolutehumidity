@@ -13,7 +13,13 @@ const {
 	STATE_TEMPERATURE,
 } = require('./lib/modules/constants');
 const { AbsoluteHumidityDeviceManagement } = require('./lib/modules/deviceManager');
-const { createUniqueDeviceId, createUniqueIdFromBase, legacySanitizeId, sanitizeId } = require('./lib/modules/idUtils');
+const {
+	createUniqueDeviceId,
+	createUniqueIdFromBase,
+	createUpdatedDeviceId,
+	legacySanitizeId,
+	sanitizeId,
+} = require('./lib/modules/idUtils');
 const { translate } = require('./lib/modules/i18n');
 
 class Absolutehumidity extends utils.Adapter {
@@ -87,10 +93,13 @@ class Absolutehumidity extends utils.Adapter {
 	async updateDevice(id, data) {
 		const oldDevice = this.getDeviceById(id);
 		const devices = this.getConfiguredDevices();
-		const device = this.normalizeDeviceFormData(data, id);
+		const updatedId = createUpdatedDeviceId(data.name, id, devices);
+		const device = this.normalizeDeviceFormData(data, updatedId);
 		const updatedDevices = devices.map(existingDevice => (existingDevice.id === id ? device : existingDevice));
 
-		if (oldDevice) {
+		if (oldDevice && oldDevice.id !== device.id) {
+			await this.deleteObjectIfExists(this.getDeviceObjectId(oldDevice.id), { recursive: true });
+		} else if (oldDevice) {
 			await this.deleteObsoleteDeviceStates(oldDevice, device);
 		}
 

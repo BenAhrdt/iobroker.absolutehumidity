@@ -1,29 +1,33 @@
 'use strict';
 
-/**
- * This is a dummy TypeScript test file using chai and mocha
- *
- * It's automatically excluded from npm and its build output is excluded from both git and npm.
- * It is advised to test all your modules with accompanying *.test.js-files
- */
-
-// tslint:disable:no-unused-expression
-
 const { expect } = require('chai');
-// import { functionToTest } from "./moduleToTest";
+const { createUpdatedDeviceId } = require('./lib/modules/idUtils');
 
-describe('module to test => function to test', () => {
-	// initializing logic
-	const expected = 5;
+describe('device ID updates', () => {
+	it('should create a new ID when a device is renamed', () => {
+		const devices = [{ id: 'living_room', name: 'Living room' }];
 
-	it(`should return ${expected}`, () => {
-		const result = 5;
-		// assign result a value from functionToTest
-		expect(result).to.equal(expected);
-		// or using the should() syntax
-		result.should.equal(expected);
+		const id = createUpdatedDeviceId('Bedroom', 'living_room', devices);
+
+		expect(id).to.equal('bedroom');
 	});
-	// ... more tests => it
-});
 
-// ... more test suites => describe
+	it('should keep the ID when the sanitized device name does not change', () => {
+		const devices = [{ id: 'living_room', name: 'Living room' }];
+
+		const id = createUpdatedDeviceId('Living room', 'living_room', devices);
+
+		expect(id).to.equal('living_room');
+	});
+
+	it('should avoid IDs already used by other devices', () => {
+		const devices = [
+			{ id: 'living_room', name: 'Living room' },
+			{ id: 'bedroom', name: 'Bedroom' },
+		];
+
+		const id = createUpdatedDeviceId('Bedroom', 'living_room', devices);
+
+		expect(id).to.equal('bedroom_2');
+	});
+});
