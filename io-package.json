@@ -127,9 +127,18 @@
       }
     ]
   },
-  "native": {
-    "devices": []
-  },
+  "native": {},
   "objects": [],
-  "instanceObjects": []
+  "instanceObjects": [
+    {
+      "_id": "devices",
+      "type": "folder",
+      "common": {
+        "name": "Devices"
+      },
+      "native": {
+        "devices": []
+      }
+    }
+  ]
 }

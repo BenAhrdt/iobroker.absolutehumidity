@@ -27,6 +27,7 @@ class Absolutehumidity extends utils.Adapter {
 		});
 
 		this.deviceManagement = null;
+		this.devices = [];
 		this.subscribedSourceIds = new Set();
 
 		this.on('ready', this.onReady.bind(this));
@@ -42,6 +43,8 @@ class Absolutehumidity extends utils.Adapter {
 	async onReady() {
 		this.deviceManagement = new AbsoluteHumidityDeviceManagement(this);
 		await this.ensureInfoStates();
+		await this.ensureDeviceRootObject();
+		await this.loadDevices();
 		await this.migrateLegacyDeviceIds();
 		await this.rebuildAllDevices();
 		await this.refreshSubscriptions();
@@ -52,7 +55,7 @@ class Absolutehumidity extends utils.Adapter {
 	 * @returns {Array<Record<string, any>>}
 	 */
 	getConfiguredDevices() {
-		return Array.isArray(this.config.devices) ? this.config.devices : [];
+		return this.devices;
 	}
 
 	/**
@@ -71,7 +74,6 @@ class Absolutehumidity extends utils.Adapter {
 		const device = this.normalizeDeviceFormData(data, createUniqueDeviceId(data.name, devices));
 		const updatedDevices = [...devices, device];
 
-		await this.validateDeviceSourceIds(device);
 		await this.ensureDeviceObjects(device);
 		await this.updateDeviceValues(device);
 		await this.refreshSubscriptions(updatedDevices);
@@ -87,8 +89,6 @@ class Absolutehumidity extends utils.Adapter {
 		const devices = this.getConfiguredDevices();
 		const device = this.normalizeDeviceFormData(data, id);
 		const updatedDevices = devices.map(existingDevice => (existingDevice.id === id ? device : existingDevice));
-
-		await this.validateDeviceSourceIds(device);
 
 		if (oldDevice) {
 			await this.deleteObsoleteDeviceStates(oldDevice, device);
@@ -161,8 +161,8 @@ class Absolutehumidity extends utils.Adapter {
 	 * @param {Record<string, any>} device
 	 */
 	async getDeviceSourceValidation(device) {
-		const temperatureStateValid = await this.isUsableSourceStateId(device.temperatureStateId);
-		const relativeHumidityStateValid = await this.isUsableSourceStateId(device.relativeHumidityStateId);
+		const temperatureStateValid = await this.isUsableTemperatureStateId(device.temperatureStateId);
+		const relativeHumidityStateValid = await this.isUsableRelativeHumidityStateId(device.relativeHumidityStateId);
 
 		return {
 			valid: temperatureStateValid && relativeHumidityStateValid,
@@ -184,26 +184,122 @@ class Absolutehumidity extends utils.Adapter {
 	 * @returns {Promise<boolean>}
 	 */
 	async isUsableSourceStateId(stateId) {
-		if (!this.isValidForeignStateId(stateId)) {
-			return false;
-		}
-
-		let object;
-
-		try {
-			object = await this.getForeignObjectAsync(stateId);
-		} catch (error) {
-			this.log.warn(`Cannot validate state ID "${stateId}": ${error.message}`);
-			return false;
-		}
+		const object = await this.getUsableSourceStateObject(stateId);
 
 		return object?.type === 'state' && object.common?.type === 'number';
+	}
+
+	/**
+	 * @param {unknown} stateId
+	 * @returns {Promise<boolean>}
+	 */
+	async isUsableTemperatureStateId(stateId) {
+		const object = await this.getUsableSourceStateObject(stateId);
+
+		return (
+			object?.type === 'state' &&
+			object.common?.type === 'number' &&
+			this.isSupportedTemperatureUnit(object.common.unit)
+		);
+	}
+
+	/**
+	 * @param {unknown} stateId
+	 * @returns {Promise<boolean>}
+	 */
+	async isUsableRelativeHumidityStateId(stateId) {
+		const object = await this.getUsableSourceStateObject(stateId);
+
+		return (
+			object?.type === 'state' &&
+			object.common?.type === 'number' &&
+			this.isSupportedRelativeHumidityUnit(object.common.unit)
+		);
+	}
+
+	/**
+	 * @param {unknown} stateId
+	 */
+	async getUsableSourceStateObject(stateId) {
+		if (!this.isValidForeignStateId(stateId)) {
+			return null;
+		}
+
+		try {
+			return await this.getForeignObjectAsync(stateId);
+		} catch (error) {
+			this.log.warn(`Cannot validate state ID "${stateId}": ${error.message}`);
+			return null;
+		}
+	}
+
+	/**
+	 * @param {unknown} unit
+	 */
+	isSupportedTemperatureUnit(unit) {
+		const normalizedUnit = this.normalizeUnit(unit);
+
+		return (
+			normalizedUnit === '' || normalizedUnit === '°c' || normalizedUnit === 'c' || this.isFahrenheitUnit(unit)
+		);
+	}
+
+	/**
+	 * @param {unknown} unit
+	 */
+	isSupportedRelativeHumidityUnit(unit) {
+		const normalizedUnit = this.normalizeUnit(unit);
+
+		return normalizedUnit === '' || normalizedUnit === '%';
+	}
+
+	/**
+	 * @param {unknown} unit
+	 */
+	isFahrenheitUnit(unit) {
+		const normalizedUnit = this.normalizeUnit(unit);
+
+		return normalizedUnit === '°f' || normalizedUnit === 'f';
+	}
+
+	/**
+	 * @param {unknown} unit
+	 */
+	normalizeUnit(unit) {
+		return typeof unit === 'string' ? unit.trim().toLowerCase().replace(/\s+/g, '') : '';
 	}
 
 	/**
 	 * @param {Record<string, any>[]} devices
 	 */
 	async saveDevices(devices) {
+		await this.extendObjectAsync(DEVICE_ROOT, {
+			native: {
+				devices,
+			},
+		});
+		this.devices = devices;
+	}
+
+	async loadDevices() {
+		const legacyDevices = Array.isArray(this.config.devices) ? this.config.devices : [];
+		const hasLegacyDevicesConfig = Object.prototype.hasOwnProperty.call(this.config, 'devices');
+
+		if (legacyDevices.length) {
+			await this.saveDevices(legacyDevices);
+			await this.deleteLegacyConfiguredDevices();
+			return;
+		}
+
+		const deviceRootObject = await this.getObjectAsync(DEVICE_ROOT);
+		this.devices = Array.isArray(deviceRootObject?.native?.devices) ? deviceRootObject.native.devices : [];
+
+		if (hasLegacyDevicesConfig) {
+			await this.deleteLegacyConfiguredDevices();
+		}
+	}
+
+	async deleteLegacyConfiguredDevices() {
 		const adapterObjectId = `system.adapter.${this.namespace}`;
 		const adapterObject = await this.getForeignObjectAsync(adapterObjectId);
 
@@ -211,13 +307,15 @@ class Absolutehumidity extends utils.Adapter {
 			throw new Error(`Could not find adapter object ${adapterObjectId}`);
 		}
 
-		adapterObject.native = {
-			...adapterObject.native,
-			devices,
-		};
+		if (!Object.prototype.hasOwnProperty.call(adapterObject.native || {}, 'devices')) {
+			delete this.config.devices;
+			return;
+		}
+
+		delete adapterObject.native.devices;
 
 		await this.setForeignObjectAsync(adapterObjectId, adapterObject);
-		this.config.devices = devices;
+		delete this.config.devices;
 	}
 
 	async rebuildAllDevices() {
@@ -278,6 +376,18 @@ class Absolutehumidity extends utils.Adapter {
 				name: 'Information',
 			},
 			native: {},
+		});
+	}
+
+	async ensureDeviceRootObject() {
+		await this.setObjectNotExistsAsync(DEVICE_ROOT, {
+			type: 'folder',
+			common: {
+				name: 'Devices',
+			},
+			native: {
+				devices: [],
+			},
 		});
 	}
 
@@ -499,7 +609,7 @@ class Absolutehumidity extends utils.Adapter {
 			return;
 		}
 
-		const temperature = await this.readNumberState(device.temperatureStateId);
+		const temperature = await this.readTemperatureStateAsCelsius(device.temperatureStateId);
 		const relativeHumidity = await this.readNumberState(device.relativeHumidityStateId);
 		const absoluteHumidity = calculateAbsoluteHumidity(temperature, relativeHumidity);
 		const dewPointTemperature = calculateDewPointTemperature(temperature, relativeHumidity);
@@ -527,6 +637,25 @@ class Absolutehumidity extends utils.Adapter {
 			val: dewPointTemperature,
 			ack: true,
 		});
+	}
+
+	/**
+	 * @param {string} stateId
+	 */
+	async readTemperatureStateAsCelsius(stateId) {
+		const temperature = await this.readNumberState(stateId);
+
+		if (temperature === null) {
+			return null;
+		}
+
+		const object = await this.getUsableSourceStateObject(stateId);
+
+		if (this.isFahrenheitUnit(object?.common?.unit)) {
+			return ((temperature - 32) * 5) / 9;
+		}
+
+		return temperature;
 	}
 
 	/**

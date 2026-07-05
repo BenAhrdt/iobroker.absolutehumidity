@@ -35,11 +35,16 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Build Config in adapter own device object
+
 ### 0.0.3 (2026-07-05)
 * (BenAhrdt) Add new features and icons to deviceManager
 
 ### 0.0.2 (2026-07-05)
 * (BenAhrdt) initial release
+
+[Older changes can be found there](CHANGELOG_OLD.md)
 
 ## License
 MIT License
