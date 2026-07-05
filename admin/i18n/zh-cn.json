@@ -11,6 +11,7 @@
 	"Delete device": "删除设备",
 	"Delete this device?": "删除此设备？",
 	"Device not found": "未找到设备",
+	"Invalid source state": "无效的源状态",
 	"Name": "名称",
 	"Temperature": "温度",
 	"Temperature state": "温度状态",

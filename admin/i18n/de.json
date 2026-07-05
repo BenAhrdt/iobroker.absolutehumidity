@@ -11,6 +11,7 @@
 	"Delete device": "Gerät löschen",
 	"Delete this device?": "Dieses Gerät löschen?",
 	"Device not found": "Gerät nicht gefunden",
+	"Invalid source state": "Ungültiger Quell-State",
 	"Name": "Name",
 	"Temperature": "Temperatur",
 	"Temperature state": "Temperatur-State",

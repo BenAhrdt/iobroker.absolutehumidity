@@ -11,6 +11,7 @@
 	"Delete device": "Excluir dispositivo",
 	"Delete this device?": "Excluir este dispositivo?",
 	"Device not found": "Dispositivo não encontrado",
+	"Invalid source state": "Estado de origem inválido",
 	"Name": "Nome",
 	"Temperature": "Temperatura",
 	"Temperature state": "Estado de temperatura",

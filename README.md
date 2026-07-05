@@ -19,6 +19,9 @@ build absolute humidity from actual temperature and relative humidity
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Add new features and icons to deviceManager
+
 ### 0.0.2 (2026-07-05)
 * (BenAhrdt) initial release
 

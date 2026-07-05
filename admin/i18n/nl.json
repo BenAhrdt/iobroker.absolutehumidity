@@ -11,6 +11,7 @@
 	"Delete device": "Apparaat verwijderen",
 	"Delete this device?": "Dit apparaat verwijderen?",
 	"Device not found": "Apparaat niet gevonden",
+	"Invalid source state": "Ongeldige bronstate",
 	"Name": "Naam",
 	"Temperature": "Temperatuur",
 	"Temperature state": "Temperatuurstate",

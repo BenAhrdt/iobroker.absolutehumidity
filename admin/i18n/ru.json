@@ -11,6 +11,7 @@
 	"Delete device": "Удалить устройство",
 	"Delete this device?": "Удалить это устройство?",
 	"Device not found": "Устройство не найдено",
+	"Invalid source state": "Недопустимое исходное состояние",
 	"Name": "Имя",
 	"Temperature": "Температура",
 	"Temperature state": "Состояние температуры",
