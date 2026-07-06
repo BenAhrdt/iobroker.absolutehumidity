@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "news": {
+      "0.0.6": {
+        "en": "Sort devices after refresh in case of absolute humidity",
+        "de": "Sortieren Sie die Geräte nach der Auffrischung im Falle absoluter Luftfeuchtigkeit.",
+        "ru": "После обновления отсортируйте устройства в случае повышенной абсолютной влажности.",
+        "pt": "Ordene os dispositivos após a atualização em caso de umidade absoluta.",
+        "nl": "Sorteer de apparaten na het vernieuwen in geval van extreme luchtvochtigheid.",
+        "fr": "Trier les appareils après actualisation en cas d'humidité absolue",
+        "it": "Ordina i dispositivi dopo l'aggiornamento in caso di umidità assoluta",
+        "es": "Clasifique los dispositivos después de la actualización en caso de humedad absoluta.",
+        "pl": "Posortuj urządzenia po odświeżeniu w przypadku wilgotności bezwzględnej",
+        "uk": "Сортуйте пристрої після оновлення за умови абсолютної вологості",
+        "zh-cn": "刷新后，在绝对湿度情况下对设备进行排序"
+      },
       "0.0.5": {
         "en": "Id will change in case of renameing device\nAdd second manual calculation for compare",
         "de": "Die ID ändert sich, wenn das Gerät umbenannt wird.\nFüge eine zweite manuelle Berechnung zum Vergleich hinzu.",
