@@ -5,6 +5,8 @@
 	"Open Device Manager": "Abrir Device Manager",
 	"Open adapter tab": "Abrir aba do adaptador",
 	"Manual calculation": "Cálculo manual",
+	"Outdoor": "Exterior",
+	"Indoor": "Interior",
 	"Add device": "Adicionar dispositivo",
 	"Add a temperature and humidity device": "Adicionar dispositivo de temperatura e umidade",
 	"Edit device": "Editar dispositivo",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Umidade relativa",
 	"Relative humidity state": "Estado de umidade relativa",
 	"Create relative humidity state in adapter": "Criar estado de umidade relativa no adaptador",
+	"Outdoor device": "O dispositivo está no exterior",
 	"Absolute humidity": "Umidade absoluta",
-	"Dew point temperature": "Temperatura do ponto de orvalho"
+	"Dew point temperature": "Temperatura do ponto de orvalho",
+	"Ventilation info unavailable": "A recomendação de ventilação ainda não está disponível porque a umidade absoluta ainda não foi calculada.",
+	"Outdoor ventilation reference": "Referência exterior: a umidade absoluta é {absoluteHumidity} g/m³. Este valor é usado para recomendações de ventilação interna.",
+	"Indoor ventilation info without outdoor reference": "Interior: a umidade absoluta é {absoluteHumidity} g/m³. Marque um dispositivo como exterior para receber uma recomendação de ventilação.",
+	"Ventilation recommended because indoor is higher": "Ventilar pode ser útil: a umidade absoluta interna é {absoluteHumidity} g/m³, a externa {outdoorAbsoluteHumidity} g/m³. O interior está {difference} g/m³ mais úmido.",
+	"Ventilation not recommended because indoor is not higher": "Ventilar pode ser menos útil agora: a umidade absoluta interna é {absoluteHumidity} g/m³, a externa {outdoorAbsoluteHumidity} g/m³. A umidade absoluta interna não é maior."
 }

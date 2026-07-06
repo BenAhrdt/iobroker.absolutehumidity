@@ -1,6 +1,7 @@
 'use strict';
 
 const { expect } = require('chai');
+const { getDevicesSortedByAbsoluteHumidity } = require('./lib/modules/deviceManager');
 const { createUpdatedDeviceId } = require('./lib/modules/idUtils');
 
 describe('device ID updates', () => {
@@ -29,5 +30,32 @@ describe('device ID updates', () => {
 		const id = createUpdatedDeviceId('Bedroom', 'living_room', devices);
 
 		expect(id).to.equal('bedroom_2');
+	});
+});
+
+describe('device manager sorting', () => {
+	it('should sort devices by absolute humidity ascending', async () => {
+		const devices = [
+			{ id: 'bathroom', name: 'Bathroom' },
+			{ id: 'outside', name: 'Outside' },
+			{ id: 'living_room', name: 'Living room' },
+		];
+		const states = new Map([
+			['devices.bathroom.absoluteHumidity', { val: 11.2 }],
+			['devices.outside.absoluteHumidity', { val: 7.6 }],
+			['devices.living_room.absoluteHumidity', { val: 9.4 }],
+		]);
+		const adapter = {
+			getConfiguredDevices: () => devices,
+			getDeviceObjectId: id => `devices.${id}`,
+			getStateAsync: async id => states.get(id),
+			log: {
+				debug: () => {},
+			},
+		};
+
+		const sortedDevices = await getDevicesSortedByAbsoluteHumidity(adapter);
+
+		expect(sortedDevices.map(device => device.id)).to.deep.equal(['outside', 'living_room', 'bathroom']);
 	});
 });

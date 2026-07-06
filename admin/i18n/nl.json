@@ -5,6 +5,8 @@
 	"Open Device Manager": "Device Manager openen",
 	"Open adapter tab": "Adaptertabblad openen",
 	"Manual calculation": "Handmatige berekening",
+	"Outdoor": "Buiten",
+	"Indoor": "Binnen",
 	"Add device": "Apparaat toevoegen",
 	"Add a temperature and humidity device": "Temperatuur- en vochtigheidsapparaat toevoegen",
 	"Edit device": "Apparaat bewerken",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Relatieve luchtvochtigheid",
 	"Relative humidity state": "Relatieve-luchtvochtigheidstate",
 	"Create relative humidity state in adapter": "Relatieve-luchtvochtigheidstate in adapter aanmaken",
+	"Outdoor device": "Apparaat bevindt zich buiten",
 	"Absolute humidity": "Absolute luchtvochtigheid",
-	"Dew point temperature": "Dauwpunttemperatuur"
+	"Dew point temperature": "Dauwpunttemperatuur",
+	"Ventilation info unavailable": "Het ventilatieadvies is nog niet beschikbaar omdat de absolute luchtvochtigheid nog niet is berekend.",
+	"Outdoor ventilation reference": "Buitenreferentie: de absolute luchtvochtigheid is {absoluteHumidity} g/m³. Deze waarde wordt gebruikt voor ventilatieadvies binnen.",
+	"Indoor ventilation info without outdoor reference": "Binnen: de absolute luchtvochtigheid is {absoluteHumidity} g/m³. Markeer een apparaat als buiten om ventilatieadvies te ontvangen.",
+	"Ventilation recommended because indoor is higher": "Ventileren kan zinvol zijn: binnen is de absolute luchtvochtigheid {absoluteHumidity} g/m³, buiten {outdoorAbsoluteHumidity} g/m³. Binnen is het {difference} g/m³ vochtiger.",
+	"Ventilation not recommended because indoor is not higher": "Ventileren lijkt nu minder zinvol: binnen is de absolute luchtvochtigheid {absoluteHumidity} g/m³, buiten {outdoorAbsoluteHumidity} g/m³. De absolute luchtvochtigheid binnen is niet hoger."
 }

@@ -5,6 +5,8 @@
 	"Open Device Manager": "Device Manager öffnen",
 	"Open adapter tab": "Adapter-Tab öffnen",
 	"Manual calculation": "Manuelle Berechnung",
+	"Outdoor": "Außen",
+	"Indoor": "Innen",
 	"Add device": "Gerät hinzufügen",
 	"Add a temperature and humidity device": "Temperatur- und Luftfeuchte-Gerät hinzufügen",
 	"Edit device": "Gerät bearbeiten",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Relative Luftfeuchte",
 	"Relative humidity state": "State für relative Luftfeuchte",
 	"Create relative humidity state in adapter": "State für relative Luftfeuchte im Adapter anlegen",
+	"Outdoor device": "Gerät befindet sich außen",
 	"Absolute humidity": "Absolute Luftfeuchte",
-	"Dew point temperature": "Taupunkttemperatur"
+	"Dew point temperature": "Taupunkttemperatur",
+	"Ventilation info unavailable": "Die Lüftungsempfehlung ist noch nicht verfügbar, weil die absolute Luftfeuchte noch nicht berechnet wurde.",
+	"Outdoor ventilation reference": "Außenreferenz: Die absolute Luftfeuchte beträgt {absoluteHumidity} g/m³. Dieser Wert wird für die Lüftungsempfehlung der Innenräume verwendet.",
+	"Indoor ventilation info without outdoor reference": "Innen: Die absolute Luftfeuchte beträgt {absoluteHumidity} g/m³. Markiere ein Außengerät, um eine Lüftungsempfehlung zu erhalten.",
+	"Ventilation recommended because indoor is higher": "Lüften könnte sinnvoll sein: Innen beträgt die absolute Luftfeuchte {absoluteHumidity} g/m³, außen {outdoorAbsoluteHumidity} g/m³. Innen ist es um {difference} g/m³ feuchter.",
+	"Ventilation not recommended because indoor is not higher": "Lüften dürfte aktuell weniger sinnvoll sein: Innen beträgt die absolute Luftfeuchte {absoluteHumidity} g/m³, außen {outdoorAbsoluteHumidity} g/m³. Innen ist die absolute Luftfeuchte nicht höher."
 }

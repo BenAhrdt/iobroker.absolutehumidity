@@ -5,6 +5,8 @@
 	"Open Device Manager": "打开 Device Manager",
 	"Open adapter tab": "打开适配器标签页",
 	"Manual calculation": "手动计算",
+	"Outdoor": "室外",
+	"Indoor": "室内",
 	"Add device": "添加设备",
 	"Add a temperature and humidity device": "添加温湿度设备",
 	"Edit device": "编辑设备",
@@ -19,6 +21,12 @@
 	"Relative humidity": "相对湿度",
 	"Relative humidity state": "相对湿度状态",
 	"Create relative humidity state in adapter": "在适配器中创建相对湿度状态",
+	"Outdoor device": "设备位于室外",
 	"Absolute humidity": "绝对湿度",
-	"Dew point temperature": "露点温度"
+	"Dew point temperature": "露点温度",
+	"Ventilation info unavailable": "通风建议尚不可用，因为尚未计算绝对湿度。",
+	"Outdoor ventilation reference": "室外参考：绝对湿度为 {absoluteHumidity} g/m³。该值用于室内通风建议。",
+	"Indoor ventilation info without outdoor reference": "室内：绝对湿度为 {absoluteHumidity} g/m³。请将一个设备标记为室外，以获取通风建议。",
+	"Ventilation recommended because indoor is higher": "通风可能有用：室内绝对湿度为 {absoluteHumidity} g/m³，室外为 {outdoorAbsoluteHumidity} g/m³。室内高出 {difference} g/m³。",
+	"Ventilation not recommended because indoor is not higher": "现在通风可能作用较小：室内绝对湿度为 {absoluteHumidity} g/m³，室外为 {outdoorAbsoluteHumidity} g/m³。室内绝对湿度并不更高。"
 }

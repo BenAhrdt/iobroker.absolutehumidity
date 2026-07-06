@@ -5,6 +5,8 @@
 	"Open Device Manager": "Apri Device Manager",
 	"Open adapter tab": "Apri scheda adattatore",
 	"Manual calculation": "Calcolo manuale",
+	"Outdoor": "Esterno",
+	"Indoor": "Interno",
 	"Add device": "Aggiungi dispositivo",
 	"Add a temperature and humidity device": "Aggiungi dispositivo di temperatura e umidità",
 	"Edit device": "Modifica dispositivo",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Umidità relativa",
 	"Relative humidity state": "Stato umidità relativa",
 	"Create relative humidity state in adapter": "Crea stato umidità relativa nell'adattatore",
+	"Outdoor device": "Il dispositivo è all'esterno",
 	"Absolute humidity": "Umidità assoluta",
-	"Dew point temperature": "Temperatura del punto di rugiada"
+	"Dew point temperature": "Temperatura del punto di rugiada",
+	"Ventilation info unavailable": "La raccomandazione di ventilazione non è ancora disponibile perché l'umidità assoluta non è stata calcolata.",
+	"Outdoor ventilation reference": "Riferimento esterno: l'umidità assoluta è {absoluteHumidity} g/m³. Questo valore viene usato per le raccomandazioni di ventilazione interne.",
+	"Indoor ventilation info without outdoor reference": "Interno: l'umidità assoluta è {absoluteHumidity} g/m³. Contrassegna un dispositivo come esterno per ricevere una raccomandazione di ventilazione.",
+	"Ventilation recommended because indoor is higher": "Ventilare potrebbe essere utile: l'umidità assoluta interna è {absoluteHumidity} g/m³, quella esterna {outdoorAbsoluteHumidity} g/m³. L'interno è più umido di {difference} g/m³.",
+	"Ventilation not recommended because indoor is not higher": "Ventilare potrebbe essere meno utile ora: l'umidità assoluta interna è {absoluteHumidity} g/m³, quella esterna {outdoorAbsoluteHumidity} g/m³. L'umidità assoluta interna non è più alta."
 }

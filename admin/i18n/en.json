@@ -5,6 +5,8 @@
 	"Open Device Manager": "Open Device Manager",
 	"Open adapter tab": "Open adapter tab",
 	"Manual calculation": "Manual calculation",
+	"Outdoor": "Outdoor",
+	"Indoor": "Indoor",
 	"Add device": "Add device",
 	"Add a temperature and humidity device": "Add a temperature and humidity device",
 	"Edit device": "Edit device",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Relative humidity",
 	"Relative humidity state": "Relative humidity state",
 	"Create relative humidity state in adapter": "Create relative humidity state in adapter",
+	"Outdoor device": "Device is outdoors",
 	"Absolute humidity": "Absolute humidity",
-	"Dew point temperature": "Dew point temperature"
+	"Dew point temperature": "Dew point temperature",
+	"Ventilation info unavailable": "The ventilation recommendation is not available yet because absolute humidity has not been calculated.",
+	"Outdoor ventilation reference": "Outdoor reference: Absolute humidity is {absoluteHumidity} g/m³. This value is used for indoor ventilation recommendations.",
+	"Indoor ventilation info without outdoor reference": "Indoor: Absolute humidity is {absoluteHumidity} g/m³. Mark one device as outdoors to receive a ventilation recommendation.",
+	"Ventilation recommended because indoor is higher": "Ventilation could be useful: Indoor absolute humidity is {absoluteHumidity} g/m³, outdoor is {outdoorAbsoluteHumidity} g/m³. Indoor air is {difference} g/m³ more humid.",
+	"Ventilation not recommended because indoor is not higher": "Ventilation may be less useful right now: Indoor absolute humidity is {absoluteHumidity} g/m³, outdoor is {outdoorAbsoluteHumidity} g/m³. Indoor absolute humidity is not higher."
 }

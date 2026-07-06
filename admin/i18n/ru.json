@@ -5,6 +5,8 @@
 	"Open Device Manager": "Открыть Device Manager",
 	"Open adapter tab": "Открыть вкладку адаптера",
 	"Manual calculation": "Ручной расчет",
+	"Outdoor": "Снаружи",
+	"Indoor": "Внутри",
 	"Add device": "Добавить устройство",
 	"Add a temperature and humidity device": "Добавить устройство температуры и влажности",
 	"Edit device": "Редактировать устройство",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Относительная влажность",
 	"Relative humidity state": "Состояние относительной влажности",
 	"Create relative humidity state in adapter": "Создать состояние относительной влажности в адаптере",
+	"Outdoor device": "Устройство находится снаружи",
 	"Absolute humidity": "Абсолютная влажность",
-	"Dew point temperature": "Температура точки росы"
+	"Dew point temperature": "Температура точки росы",
+	"Ventilation info unavailable": "Рекомендация по проветриванию пока недоступна, потому что абсолютная влажность еще не рассчитана.",
+	"Outdoor ventilation reference": "Наружный ориентир: абсолютная влажность составляет {absoluteHumidity} г/м³. Это значение используется для рекомендаций по проветриванию помещений.",
+	"Indoor ventilation info without outdoor reference": "Внутри: абсолютная влажность составляет {absoluteHumidity} г/м³. Отметьте одно устройство как наружное, чтобы получить рекомендацию по проветриванию.",
+	"Ventilation recommended because indoor is higher": "Проветривание может быть полезно: внутри абсолютная влажность {absoluteHumidity} г/м³, снаружи {outdoorAbsoluteHumidity} г/м³. Внутри влажнее на {difference} г/м³.",
+	"Ventilation not recommended because indoor is not higher": "Проветривание сейчас может быть менее полезным: внутри абсолютная влажность {absoluteHumidity} г/м³, снаружи {outdoorAbsoluteHumidity} г/м³. Внутренняя абсолютная влажность не выше."
 }

@@ -5,6 +5,8 @@
 	"Open Device Manager": "Ouvrir Device Manager",
 	"Open adapter tab": "Ouvrir l'onglet de l'adaptateur",
 	"Manual calculation": "Calcul manuel",
+	"Outdoor": "Extérieur",
+	"Indoor": "Intérieur",
 	"Add device": "Ajouter un appareil",
 	"Add a temperature and humidity device": "Ajouter un appareil de température et humidité",
 	"Edit device": "Modifier l'appareil",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Humidité relative",
 	"Relative humidity state": "État d'humidité relative",
 	"Create relative humidity state in adapter": "Créer l'état d'humidité relative dans l'adaptateur",
+	"Outdoor device": "L'appareil est à l'extérieur",
 	"Absolute humidity": "Humidité absolue",
-	"Dew point temperature": "Température du point de rosée"
+	"Dew point temperature": "Température du point de rosée",
+	"Ventilation info unavailable": "La recommandation d'aération n'est pas encore disponible, car l'humidité absolue n'a pas encore été calculée.",
+	"Outdoor ventilation reference": "Référence extérieure : l'humidité absolue est de {absoluteHumidity} g/m³. Cette valeur est utilisée pour les recommandations d'aération intérieures.",
+	"Indoor ventilation info without outdoor reference": "Intérieur : l'humidité absolue est de {absoluteHumidity} g/m³. Marquez un appareil comme extérieur pour recevoir une recommandation d'aération.",
+	"Ventilation recommended because indoor is higher": "L'aération pourrait être utile : l'humidité absolue intérieure est de {absoluteHumidity} g/m³, celle de l'extérieur de {outdoorAbsoluteHumidity} g/m³. L'intérieur est plus humide de {difference} g/m³.",
+	"Ventilation not recommended because indoor is not higher": "L'aération pourrait être moins utile pour le moment : l'humidité absolue intérieure est de {absoluteHumidity} g/m³, celle de l'extérieur de {outdoorAbsoluteHumidity} g/m³. L'humidité absolue intérieure n'est pas plus élevée."
 }

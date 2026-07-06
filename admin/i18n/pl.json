@@ -5,6 +5,8 @@
 	"Open Device Manager": "Otwórz Device Manager",
 	"Open adapter tab": "Otwórz kartę adaptera",
 	"Manual calculation": "Obliczenie ręczne",
+	"Outdoor": "Na zewnątrz",
+	"Indoor": "Wewnątrz",
 	"Add device": "Dodaj urządzenie",
 	"Add a temperature and humidity device": "Dodaj urządzenie temperatury i wilgotności",
 	"Edit device": "Edytuj urządzenie",
@@ -19,6 +21,12 @@
 	"Relative humidity": "Wilgotność względna",
 	"Relative humidity state": "Stan wilgotności względnej",
 	"Create relative humidity state in adapter": "Utwórz stan wilgotności względnej w adapterze",
+	"Outdoor device": "Urządzenie znajduje się na zewnątrz",
 	"Absolute humidity": "Wilgotność bezwzględna",
-	"Dew point temperature": "Temperatura punktu rosy"
+	"Dew point temperature": "Temperatura punktu rosy",
+	"Ventilation info unavailable": "Zalecenie wietrzenia nie jest jeszcze dostępne, ponieważ wilgotność bezwzględna nie została obliczona.",
+	"Outdoor ventilation reference": "Odniesienie zewnętrzne: wilgotność bezwzględna wynosi {absoluteHumidity} g/m³. Ta wartość jest używana do zaleceń wietrzenia pomieszczeń.",
+	"Indoor ventilation info without outdoor reference": "Wewnątrz: wilgotność bezwzględna wynosi {absoluteHumidity} g/m³. Oznacz jedno urządzenie jako zewnętrzne, aby otrzymać zalecenie wietrzenia.",
+	"Ventilation recommended because indoor is higher": "Wietrzenie może być przydatne: wilgotność bezwzględna wewnątrz wynosi {absoluteHumidity} g/m³, na zewnątrz {outdoorAbsoluteHumidity} g/m³. Wewnątrz jest o {difference} g/m³ wilgotniej.",
+	"Ventilation not recommended because indoor is not higher": "Wietrzenie może być teraz mniej przydatne: wilgotność bezwzględna wewnątrz wynosi {absoluteHumidity} g/m³, na zewnątrz {outdoorAbsoluteHumidity} g/m³. Wilgotność bezwzględna wewnątrz nie jest wyższa."
 }

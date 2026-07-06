@@ -129,6 +129,7 @@ class Absolutehumidity extends utils.Adapter {
 		return {
 			id,
 			name: String(data.name || id).trim(),
+			isOutdoor: data.isOutdoor === true,
 			temperatureStateId: String(data.temperatureStateId || '').trim(),
 			relativeHumidityStateId: String(data.relativeHumidityStateId || '').trim(),
 			createTemperatureState: data.createTemperatureState !== false,
@@ -421,6 +422,7 @@ class Absolutehumidity extends utils.Adapter {
 			native: {
 				temperatureStateId: device.temperatureStateId,
 				relativeHumidityStateId: device.relativeHumidityStateId,
+				isOutdoor: device.isOutdoor === true,
 			},
 		});
 
@@ -590,6 +592,22 @@ class Absolutehumidity extends utils.Adapter {
 
 		for (const device of affectedDevices) {
 			await this.updateDeviceValues(device);
+		}
+
+		if (affectedDevices.length) {
+			await this.refreshDeviceManagerDevices();
+		}
+	}
+
+	async refreshDeviceManagerDevices() {
+		if (!this.deviceManagement) {
+			return;
+		}
+
+		try {
+			await this.deviceManagement.refreshDevices();
+		} catch (error) {
+			this.log.debug(`Cannot refresh Device Manager view: ${error.message}`);
 		}
 	}
 
