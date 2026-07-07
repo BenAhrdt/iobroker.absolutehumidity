@@ -6,7 +6,7 @@
 ![Number of Installations](https://ioBroker.live/badges/absolutehumidity-installed.svg)
 ![Current version in stable repository](https://ioBroker.live/badges/absolutehumidity-stable.svg)
 
-[![NPM](https://nodei.co/npm/ioBroker.absolutehumidity.png?downloads=true)](https://nodei.co/npm/ioBroker.absolutehumidity/)
+[![NPM](https://nodei.co/npm/iobroker.absolutehumidity.png?downloads=true)](https://nodei.co/npm/iobroker.absolutehumidity/)
 
 **Tests:** ![Test and Release](https://github.com/BenAhrdt/ioBroker.absolutehumidity/workflows/Test%20and%20Release/badge.svg)
 
