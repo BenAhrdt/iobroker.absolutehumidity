@@ -35,7 +35,7 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-### **WORK IN PROGRESS**
+### 0.1.0 (2026-07-07)
 * (BenAhrdt) Ready for add to ioBroker latest repo
 
 ### 0.0.6 (2026-07-06)
@@ -50,9 +50,6 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 
 ### 0.0.3 (2026-07-05)
 * (BenAhrdt) Add new features and icons to deviceManager
-
-### 0.0.2 (2026-07-05)
-* (BenAhrdt) initial release
 
 [Older changes can be found there](CHANGELOG_OLD.md)
 

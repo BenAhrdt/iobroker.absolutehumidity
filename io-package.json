@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "absolutehumidity",
-    "version": "0.0.6",
+    "version": "0.1.0",
     "news": {
+      "0.1.0": {
+        "en": "Ready for add to ioBroker latest repo",
+        "de": "Bereit zum Hinzufügen zum neuesten ioBroker-Repository",
+        "ru": "Готово к добавлению в последний репозиторий ioBroker.",
+        "pt": "Pronto para ser adicionado ao repositório mais recente do ioBroker.",
+        "nl": "Klaar om toe te voegen aan de nieuwste ioBroker-repository.",
+        "fr": "Prêt à être ajouté au dernier dépôt d'ioBroker",
+        "it": "Pronto per essere aggiunto al repository più recente di ioBroker",
+        "es": "Listo para agregar al repositorio más reciente de ioBroker",
+        "pl": "Gotowe do dodania do najnowszego repozytorium ioBroker",
+        "uk": "Готово до додавання до останнього репозиторію ioBroker",
+        "zh-cn": "已准备好添加到 ioBroker 最新仓库"
+      },
       "0.0.6": {
         "en": "Sort devices after refresh in case of absolute humidity",
         "de": "Sortieren Sie die Geräte nach der Auffrischung im Falle absoluter Luftfeuchtigkeit.",
