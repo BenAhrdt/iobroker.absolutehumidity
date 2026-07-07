@@ -35,6 +35,9 @@ use different Magnus, Tetens, Sonntag, Bolton or Buck coefficient sets.
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+### **WORK IN PROGRESS**
+* (BenAhrdt) Ready for add to ioBroker latest repo
+
 ### 0.0.6 (2026-07-06)
 * (BenAhrdt) Sort devices after refresh in case of absolute humidity
 
