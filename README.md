@@ -1,8 +1,8 @@
 ![Logo](admin/absolutehumidity.svg)
 # ioBroker.absolutehumidity
 
-[![NPM version](https://img.shields.io/npm/v/ioBroker.absolutehumidity.svg)](https://www.npmjs.com/package/ioBroker.absolutehumidity)
-[![Downloads](https://img.shields.io/npm/dm/ioBroker.absolutehumidity.svg)](https://www.npmjs.com/package/ioBroker.absolutehumidity)
+[![NPM version](https://img.shields.io/npm/v/iobroker.absolutehumidity.svg)](https://www.npmjs.com/package/iobroker.absolutehumidity)
+[![Downloads](https://img.shields.io/npm/dm/iobroker.absolutehumidity.svg)](https://www.npmjs.com/package/iobroker.absolutehumidity)
 ![Number of Installations](https://ioBroker.live/badges/absolutehumidity-installed.svg)
 ![Current version in stable repository](https://ioBroker.live/badges/absolutehumidity-stable.svg)
 
