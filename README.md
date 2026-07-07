@@ -1,12 +1,12 @@
 ![Logo](admin/absolutehumidity.svg)
 # ioBroker.absolutehumidity
 
-[![NPM version](https://img.shields.io/npm/v/iobroker.absolutehumidity.svg)](https://www.npmjs.com/package/iobroker.absolutehumidity)
-[![Downloads](https://img.shields.io/npm/dm/iobroker.absolutehumidity.svg)](https://www.npmjs.com/package/iobroker.absolutehumidity)
-![Number of Installations](https://iobroker.live/badges/absolutehumidity-installed.svg)
-![Current version in stable repository](https://iobroker.live/badges/absolutehumidity-stable.svg)
+[![NPM version](https://img.shields.io/npm/v/ioBroker.absolutehumidity.svg)](https://www.npmjs.com/package/ioBroker.absolutehumidity)
+[![Downloads](https://img.shields.io/npm/dm/ioBroker.absolutehumidity.svg)](https://www.npmjs.com/package/ioBroker.absolutehumidity)
+![Number of Installations](https://ioBroker.live/badges/absolutehumidity-installed.svg)
+![Current version in stable repository](https://ioBroker.live/badges/absolutehumidity-stable.svg)
 
-[![NPM](https://nodei.co/npm/iobroker.absolutehumidity.png?downloads=true)](https://nodei.co/npm/iobroker.absolutehumidity/)
+[![NPM](https://nodei.co/npm/ioBroker.absolutehumidity.png?downloads=true)](https://nodei.co/npm/ioBroker.absolutehumidity/)
 
 **Tests:** ![Test and Release](https://github.com/BenAhrdt/ioBroker.absolutehumidity/workflows/Test%20and%20Release/badge.svg)
 

@@ -1,5 +1,5 @@
 {
-  "name": "iobroker.absolutehumidity",
+  "name": "ioBroker.absolutehumidity",
   "version": "0.0.6",
   "description": "build absolute humidity from actual temperature and relative humidity",
   "author": {
@@ -14,6 +14,7 @@
   "homepage": "https://github.com/BenAhrdt/ioBroker.absolutehumidity",
   "license": "MIT",
   "keywords": [
+    "ioBroker",
     "absolute Humidity",
     "dewpoint temperature"
   ],
@@ -22,7 +23,7 @@
     "url": "git@github.com:BenAhrdt/ioBroker.absolutehumidity.git"
   },
   "engines": {
-    "node": ">= 20"
+    "node": ">= 22"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^3.4.1",
@@ -37,7 +38,7 @@
     "@iobroker/dev-server": "^0.8.0",
     "@iobroker/eslint-config": "^2.3.4",
     "@iobroker/testing": "^5.2.2",
-    "@tsconfig/node20": "^20.1.9",
+    "@tsconfig/node22": "^22.0.5",
     "@types/iobroker": "npm:@iobroker/types@^7.2.2",
     "@types/node": "^20.19.43",
     "typescript": "~5.9.3"
