@@ -112,7 +112,7 @@ class Absolutehumidity extends utils.Adapter {
 	/**
 	 * @param {string} id
 	 */
-	async deleteDevice(id) {
+	async removeConfiguredDevice(id) {
 		const devices = this.getConfiguredDevices();
 		const updatedDevices = devices.filter(device => device.id !== id);
 
